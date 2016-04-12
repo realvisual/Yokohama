@@ -1,0 +1,20 @@
+#main {
+    position: relative;
+    height: 500px;
+    width: 1024px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#faq {
+    float: left;
+    height: 500px;
+}
+#mfu {
+    float: left;
+    height: 500px;
+}
+#reviews {
+    float: left;
+    height: 500px;
+}

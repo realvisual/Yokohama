@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta name="page-view-size" content="1280*720"/>
+<script src="jquery/jquery-1.9.1.min.js"> </script>
+<title>主页</title>
+
+<script>
+$(document).ready(function(){
+    $("#con").animate({
+    left:'0px',
+    height:'100%',
+    width:'100%'
+   },
+   1000	,
+   function(){
+	$("a").fadeIn(1500);
+	 }
+   );
+    var i=0;
+   $(".nav_list").each(function(){ /*遍历nav_list*/
+	 var str="#nav"+i;
+	 $(str).mouseover(function(){
+	 $(str).css({"background-color":"#E9E9E9","color":"#333333"});
+	 });
+	  $(str).mouseout(function(){
+	 $(str).css({"background-color":"#333333","color":"#FFFFFF"});
+	 });
+      i++;
+   });
+});
+</script>
+</head>
+<style>
+@font-face{
+font-family:impact;
+src:url('font/impact.ttf');
+}
+html,body,div,img{margin:0px;padding:0px}
+body{width:100%; height:100%}
+#con{
+	left:-100%;/*************实例为left:-1208px 测试用left:08px*************/
+	height:100%;
+	width:100%;  
+	position:absolute;
+	background-image:url(img/welcome.jpg) ;
+	overflow:hidden;
+	background-size:100% 100%;/*使背景图片自适应大小*/
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+    }
+#menu{ 
+	 position:absolute;
+	 background:#999999;
+	 height:100%; 
+	 width: 13%; 
+	 left: 87%;
+	 top: 0px;
+	 z-index:1;
+	}
+
+	#nav0{position:absolute; left:5%; top:3%}
+	#nav1{position:absolute; left:5%; top:19%; }
+	#nav2{position:absolute; left:5%; top:35%; }
+	#nav3{position:absolute; left:5%; top:51%; }
+	#nav4{position:absolute; left:5%; top:67%; }
+	#nav5{position:absolute; left:5%; top:83%; }
+
+.nav_list{
+    padding-top:11%;
+	padding-bottom:7%;
+	height:9%;
+	width:90%;
+	background:#333333;
+	position:inherit;
+	font-size:24px;
+	font-family:impact;
+	color:#FFFFFF;
+	z-index:1;
+	}
+	
+	
+	#white{
+	  position:absolute;
+	  background:#FFFFFF;
+	  left:43%;
+	  width:14%;
+	  height:100%;
+	  z-index:0;
+	}	
+	a{text-decoration:none}
+</style>
+
+<body>
+<div id="con">
+  <div id="menu" >
+  <center>
+        <a id="nav0" class="nav_list" href="pages/about.html" >
+	    <div id="t1"><span  >About Us</span></div></a>
+		<a id="nav1" class="nav_list" href="pages/portfolio.jsp">
+		 <div id="t1"><span>  Portfolio</span></div></a>
+		<a id="nav2" class="nav_list" href="pages/services.html" >
+		<div id="t1"><span> Services</span></div></a>
+		<a id="nav3" class="nav_list" href="pages/specialties.jsp" >
+		<div id="t1"><span> Specialties</span></div></a>
+		<a id="nav4" class="nav_list" href="pages/interaction.jsp" >
+		<div id="t1"><span> Interaction Center</span></div></a>
+		<a id="nav5" class="nav_list" href="pages/contact.html" >
+		<div id="t1"><span> Contact Us</span></div></a> 
+	</center>
+<div id="white"></div>
+  </div>
+  <div id="sub">
+   <a href="index.html" id="arr" 
+      style="background-image:url(img/btn.png);
+	   opacity:0.4; filter:alpha(opacity=40);/**设置背景透明度**/
+	   background-size:100% 100%; 
+      -moz-background-size:100% 100%; /* 老版本的 Firefox */
+      background-repeat:no-repeat;
+	  position:inherit;left: 0%; top: 70%; width: 87%; height: 20%; display:none"/>
+   </div>
+</div>
+</body>
+</html>

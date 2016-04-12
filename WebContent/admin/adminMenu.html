@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk">
+<title>menu</title>
+<script src="../jquery/jquery-1.9.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  var i=1;
+  $(".nav").each(function(){
+       var str="#me"+i;
+	 $(str).mouseover(function(){
+	 $(str).css({"background-color":"#E9E9E9","color":"#333333"});
+	 });
+	  $(str).mouseout(function(){
+	 $(str).css({"background-color":"#11566C","color":"#FFFFFF"});
+	 });
+	   i++; 
+  });
+});
+</script>
+</head>
+<style>
+html,body,div,img{margin:0px;padding:0px}
+#menu{
+	 position:absolute;
+	 background:#D9F1F9;
+	 height:100%; 
+	 width: 100%; 
+	 left: 0%;
+	 top: 0px;
+}
+	a{text-decoration:none}	
+#me1{position:absolute; left:5%; top:2%;}
+#me2{position:absolute; left:5%; top: 27%}
+#me3{position:absolute; left:5%; top:52%;}
+#me4{position:absolute; left:5%; top:77%}
+
+.nav{
+    padding-top:35%;
+	padding-bottom:5%;
+	padding-left:20%;
+    height:10%;
+	width:70%;
+	background:#11566C;
+	position:inherit;
+	color:#FFFFFF;
+	z-index:1;}
+</style>
+
+</head>
+<body>
+<div id="menu"> 
+<a id="me1"  class="nav" href="case.jsp">成功案例</a>
+<a id="me2"  class="nav" href="material.jsp">材料对比</a>
+<a id="me3"  class="nav" href="project.jsp">工程对比</a>
+<a id="me4"  class="nav" href="message.jsp">客户留言</a></div>
+</body>
+</html>

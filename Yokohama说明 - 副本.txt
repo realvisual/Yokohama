@@ -1,0 +1,21 @@
+Apache Tomcat v7.0
+JDK version  1.7.0_80
+servlet+jsp+jdbc
+
+
+图片存储位置为tomcat目录下的src/yokohamaImage
+
+路径获取为
+/****** 开始设置图片存储路径 ******/
+		String tomcatPath = getServletContext().getRealPath("\\");
+		String temppath = "";
+		StringTokenizer tokenizer = new StringTokenizer(tomcatPath, "\\");
+		int st = tokenizer.countTokens() - 2;
+		while (st-- > 0) {
+			temppath += tokenizer.nextToken() + "\\";
+		}
+		temppath+="src\\YokohamaImage\\";
+		testPath(temppath);
+		/*** 设置图片存储路径结束 ****/
+
+数据库中图片存储为图片名称

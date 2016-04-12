@@ -1,0 +1,97 @@
+ /**自定义字体样式 */
+ @font-face
+{
+font-family: mtcorsva;
+src: url('../font/mtcorsva.ttf');
+font-weight:bold;
+}
+
+@font-face{
+font-family:impact;
+src:url('../font/impact.ttf');
+}
+
+
+html,body,div,img{margin:0px;padding:0px}
+body{width:100%; height:100%}
+#con{
+	left:100%;/*************实例为left100% 测试用left0px*************/
+	height:100%;
+	width:100%;  
+	position:absolute;
+	/*background:#333333;
+	z-index:-1;*/
+	background:url(../img/about.jpg);
+    }
+#menu{ 
+	 position:absolute;
+	 background:#999999;
+	 height:100%; 
+	 width: 13%; 
+	 left: 0%;
+	 top: 0px;
+	}
+	
+	#nav0{position:absolute; left:5%; top:3%}
+	#nav1{position:absolute; left:5%; top:19%; }
+	#nav2{position:absolute; left:5%; top:35%; }
+	#nav3{position:absolute; left:5%; top:51%; }
+	#nav4{position:absolute; left:5%; top:67%; }
+	#nav5{position:absolute; left:5%; top:83%; }
+.nav_list{
+    padding-top:11%;
+	padding-bottom:7%;
+	height:9%;
+	width:90%;
+	background:#333333;
+	position:inherit;
+	font-size:27px;
+	font-family:mtcorsva;
+	color:#FFFFFF;
+	z-index:1;
+	}
+.Snav_list {
+     padding-top:11%;
+	padding-bottom:7%;
+	height:9%;
+	width:90%;
+	background:#CCCCCC;
+	position:inherit;
+	font-size:27px;
+	font-family:mtcorsva;
+	color:#333333;
+	z-index:1;
+	}
+		
+	a{text-decoration:none}	
+#right{
+	position:absolute;
+	left: 13%;
+	top: 0%;
+	width: 87%;
+	height: 100%;
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+	display:none;
+}
+
+#ar{
+	position:absolute; 
+	background-image:url(../img/btn1.png); 
+	left: 70%; 
+	top: 80%; 
+	height: 5%; 
+	width: 2.5%;
+	background-repeat:no-repeat;
+}
+#tag{
+	position:absolute; 
+	left: 50%; 
+	top: 85%; 
+	width: 40% ;
+	font-size:18px
+}
+ 
+
+

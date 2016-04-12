@@ -1,0 +1,12 @@
+#leftmenu {
+	position: absolute;
+	height:100%;
+	width:10%;
+	left:0%;
+	top:0%;
+}
+#rightcon{
+position:absolute;
+left:10%;
+top:0%;
+width:90%;}

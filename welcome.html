@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery/jquery-1.9.1.min.js"> </script>
+<title>首页面</title>
+
+<script>
+$(document).ready(function(){
+ // $("#con").fadeIn(3000);
+    $("#con").animate({
+	top:'0px',
+    left:'0px',
+    height:'100%',
+    width:'100%'
+   },
+"slow",
+	function(){
+	$("a").fadeTo(1500,0.7);
+	 }
+   );
+});
+</script>
+</head>
+<style>
+html,body,div,a,img{margin:0px;padding:0px}
+body{width:100%; height:100%}
+
+#con{
+    left:0%px;
+    height:100%;
+    width:100%;
+	top:-100%;
+	position:absolute;
+	background-image:url(img/welcome.jpg);
+	background-size:100% 100%;
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+    }
+</style>
+<body  >
+<div id="con">
+<font size="+2">
+    <div id="select" style="position:absolute; left: 80%; top:5%; width: 20%; height: 23px;">
+	<a href="#">日本语</a>&nbsp;
+	<a href="#">English</a>&nbsp;
+	<a href="#" >中文</a>&nbsp;
+	</div> 
+   <div id="sub" style="position:inherit">
+   <a href="index.html" id="arr" style="background-image:url(img/btn.png); 
+   background-size:100% 100%; 
+   -moz-background-size:100% 100%; /* 老版本的 Firefox */
+    background-repeat:no-repeat;
+   position:inherit;left: 0%; top: 70%; width: 100%; height: 20%; display:none"/>
+   </div>
+</font>
+</div>
+</body>
+</html>

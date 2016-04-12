@@ -1,0 +1,92 @@
+body {
+	overflow-x: hidden;
+}
+
+#main {
+    position: relative;
+    top: 25px;
+    height: 450px;
+    width: 1510px;
+}
+#faq {
+    float: left;
+    height: 100%;
+    width: 33%;
+}
+#mfu {
+    float: left;
+    height: 100%;
+    width: 33%;
+}
+#reviews {
+    float: left;
+    height: 100%;
+    width: 33%;
+}
+.faq_list {
+	padding-left: 20px;
+	padding-right: 30px;
+	margin-bottom: 30px;
+	width: 92%;
+	height: 290px;
+}
+
+.read_more {
+	height: 20px;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.read_more a {
+	float: right;
+}
+
+.title {
+	padding-left: 40px;
+	padding-top: 20px;
+}
+.verticalLine {
+	float: left;
+	position: relative;
+	top: 70px;
+	height: 290px;
+	width: 2px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: black;
+}
+.message_us {
+	margin: 0;
+	margin-left: 5%;
+	width: 95%;
+	height: 290px;
+}
+.message_us form div {
+	margin: 5px;
+	width: 393px;
+}
+.message_us form div span {
+	vertical-align: top;
+	display: inline-block;
+	width: 60px;
+}
+.input {
+	width: 320px;
+}
+#remainNum {
+	width: 393px;
+	text-align: right;
+}
+.submit {
+	float: right;
+}
+.reviews_list {
+	padding-left: 20px;
+	padding-right: 30px;
+	margin-bottom: 30px;
+	width: 92%;
+	height: 290px;
+}
