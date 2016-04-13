@@ -90,3 +90,9 @@ body {
 	width: 92%;
 	height: 290px;
 }
+.linkDiv {
+	cursor: pointer;
+}
+.linkDiv:HOVER {
+	text-decoration: underline;
+}

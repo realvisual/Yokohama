@@ -13,9 +13,9 @@ import java.sql.Statement;
 public class DB {
 
 	private static final String usename = "sa";
-	private static final String password = "adminsa";
+	private static final String password = "saqwe123_00";
 	private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-	private static final String URL ="jdbc:sqlserver://222.204.232.218:1433;databasename=Yokohama;";
+	private static final String URL ="jdbc:sqlserver://localhost:1433;databasename=Yokohama;";
 
 	static {
 		try {

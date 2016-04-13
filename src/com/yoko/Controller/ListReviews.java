@@ -32,7 +32,7 @@ public class ListReviews extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DBOperation operation = new DBOperation();
 		try {
-			request.getSession().setAttribute("reviewList", operation.getThreeReviews());
+			request.getSession().setAttribute("reviewList", operation.getSixReviews());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -84,12 +84,12 @@ public class DBOperation {
 		DB.close(conn, stmt, null);
 	}
 
-	public String getThreeReviews() throws SQLException {
+	public String getSixReviews() throws SQLException {
 		StringBuffer sb = new StringBuffer();
 		sb.append((char)1);
 		Connection conn = DB.getConn();
 		Statement stmt = conn.createStatement();
-		ResultSet rs = stmt.executeQuery("SELECT TOP 3 name, phone, review FROM ZNreviews ORDER BY id DESC");
+		ResultSet rs = stmt.executeQuery("SELECT TOP 6 name, phone, review FROM ZNreviews ORDER BY id DESC");
 		while(rs.next()) {
 			String name = rs.getString("name");
 			String phone = rs.getString("phone");

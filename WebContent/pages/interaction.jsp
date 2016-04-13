@@ -7,6 +7,7 @@
 String reviewList = (String)request.getSession().getAttribute("reviewList");
 if(reviewList==null || reviewList.equals("")) {
 	response.sendRedirect("../listReviews.do");
+	return;
 }
 reviewList = reviewList.substring(1);
 %>
@@ -14,7 +15,6 @@ reviewList = reviewList.substring(1);
 <title>Interaction</title>
 <script src="../jquery/jquery-1.9.1.min.js"></script>
 <script src="../jquery/menu.js"></script>
-<script src="../js/stringUtil.js"></script>
 <link href="../css/interaction_style.css" rel="stylesheet" type="text/css" />
 <link href="../css/interaction.css" rel="stylesheet" type="text/css" />
 </head>
@@ -84,12 +84,29 @@ reviewList = reviewList.substring(1);
 					<div class='reviews_list'>
 					<%
 					String[] ret = reviewList.split(String.valueOf((char)4));
+					int count = 0;
 					for(String r : ret) {
+						count++;
 						String[] infor = r.split(String.valueOf((char)3));
+						if(infor.length != 3) {
+							continue;
+						}
+						out.print("<div class='linkDiv'><a href='#'>");
 						out.print("<span>名字："+infor[0]+"</span>&nbsp;");
 						out.print("<span>电话："+infor[1]+"</span><br />");
-						out.println("<span>"+infor[2]+"</span><br />");
+						String s = null;
+						if(infor[2].length() > 55) {
+							s = infor[2].substring(0, 53)+"..";
+						} else {
+							s = infor[2];
+						}
+						out.print("<span>"+s+"</span>");
+						if(count != 6) {
+							out.print("<br /><hr />");
+						}
+						out.println("</a></div>");
 					}
+					request.getSession().setAttribute("reviewList", null);
 					%>
 					</div>
 					<div class='read_more'>
