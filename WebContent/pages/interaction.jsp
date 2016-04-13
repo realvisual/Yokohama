@@ -14,6 +14,7 @@ reviewList = reviewList.substring(1);
 <title>Interaction</title>
 <script src="../jquery/jquery-1.9.1.min.js"></script>
 <script src="../jquery/menu.js"></script>
+<script src="../js/stringUtil.js"></script>
 <link href="../css/interaction_style.css" rel="stylesheet" type="text/css" />
 <link href="../css/interaction.css" rel="stylesheet" type="text/css" />
 </head>
@@ -85,9 +86,9 @@ reviewList = reviewList.substring(1);
 					String[] ret = reviewList.split(String.valueOf((char)4));
 					for(String r : ret) {
 						String[] infor = r.split(String.valueOf((char)3));
-						out.print("<span>名字：</span>");
-						out.print("<span>电话：</span>");
-						out.print("<span>名字：</span>");
+						out.print("<span>名字："+infor[0]+"</span>&nbsp;");
+						out.print("<span>电话："+infor[1]+"</span><br />");
+						out.println("<span>"+infor[2]+"</span><br />");
 					}
 					%>
 					</div>
